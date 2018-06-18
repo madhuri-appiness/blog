@@ -1,0 +1,46 @@
+h1 {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 23px;
+    font-weight: 600;
+    color: #000;
+    @media(max-width: 767px) {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.err {
+    color: red;
+}
+
+.blog {
+    margin-top: 40px;
+}
+
+.blogposts {
+    padding: 20px;
+    margin: 40px 0 20px 0;
+    background: #89919208;
+    border: 1px solid #ccc;
+}
+
+.blog-detail {
+    margin-top: 30px;
+}

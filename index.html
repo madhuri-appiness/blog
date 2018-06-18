@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Blog</title>
+    <!-- <script src="../plugin/angular.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script> -->
+    <script src="../app.js"></script>
+    <script src="../route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="../signIn/maincontroller.js"></script>
+    <script src="../login/login.controller.js"></script>
+    <script src="../register/register.controller.js"></script>
+    <script src="../addBlog/addBlog.ctrl.js"></script>
+    <script src="../blog/blog.controller.js"></script>
+    <script src="../service/fetchDataService.js"></script>
+
+    <meta name="google-signin-client_id" content="280049024688-6pdvusdp0sb2bmcgnj0v485gb8pupic5">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2pcBFv_m_OVq7rQQSh5ve_bkds8HyKUE",
+            authDomain: "blog-project-9d2bd.firebaseapp.com",
+            databaseURL: "https://blog-project-9d2bd.firebaseio.com",
+            projectId: "blog-project-9d2bd",
+            storageBucket: "blog-project-9d2bd.appspot.com",
+            messagingSenderId: "597791588033"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body ng-app="app">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Blog</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!blog">Blogs</a></li>
+                <li><a href="#!addBlog">Add Blog</a></li>
+                <li><a href="#" ng-click="logOut()">Logout</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <ui-view></ui-view>
+
+</body>
+
+</html>

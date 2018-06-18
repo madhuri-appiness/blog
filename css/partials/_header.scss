@@ -1,0 +1,21 @@
+.navbar-default {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    margin: 0;
+    .navbar-nav {
+        li {
+            a {
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                }
+                &:focus {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 10px 15px;
+    }
+}

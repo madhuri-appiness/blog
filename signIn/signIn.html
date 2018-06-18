@@ -1,0 +1,22 @@
+<div class="container">
+    <div class=" login-form">
+        <h1>Login </h1>
+        <form name='myForm' novalidate>
+            <div class="form-group">
+                <input ng-model="newUsrmail" class="form-control" placeholder="Work Email" id='newUsrmail' ng-class="{err :myForm.newUsrmail.$error && myForm.$submitted && !newUsrmail}" ng-pattern="/^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/"
+                    type="email" class="login-input" required name='newUsrmail'>
+                <p class="formerror" ng-show="myForm.newUsrmail.$error && myForm.$submitted && !myForm.newUsrmail.$error.pattern && !newUsrmail">Please Enter Email</p>
+                <p class="formerror" ng-show="myForm.newUsrmail.$error.pattern && !newUsrmail">Please enter valid email</p>
+            </div>
+            <div class="form-group">
+                <input ng-model="password" class="form-control" ng-class="{err :myForm.password.$error && myForm.$submitted && !password}" placeholder="password" id='password' type="password" class="login-input" required name='password'>
+                <p class="formerror" ng-show="myForm.password.$error && myForm.$submitted && !password">Please enter password</p>
+            </div>
+            <div class="login-btn-wrap">
+                <p ng-show="errorMsg" class="formerror">{{errorMessage}}</p>
+                <button type="submit" class="btn btn-primary login-button" ng-click="submitSignIn()">SIGN IN</button>
+                <a href="#!/">SignUp</a>
+            </div>
+        </form>
+    </div>
+</div>

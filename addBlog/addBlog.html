@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="blog">
+
+        <form name="blogForm" novalidate="">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Add Blog</h1>
+                    <div class="form-group">
+                        <label>Blog Name</label>
+                        <input class="form-control" ng-class="{'error' : blogForm.blogTitle.$error && blogForm.blogTitle.$invalid}" type="text" name="blogTitle" ng-model="blogTitle" placeholder="Title" ng-minlength="5">
+                        <span class="err" ng-show="blogForm.blogTitle.$error.minlength && blogForm.blogTitle.$touched">Please enter title for blog</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Blog Post</label>
+                        <textarea class="form-control" ng-class="{'error' : blogForm.blogPost.$error && blogForm.blogPost.$invalid}" name="blogPost" ng-model="blogPost" placeholder="Post" ng-minlength="10"></textarea>
+                        <span class="err" ng-show="blogForm.blogPost.$error.minlength && blogForm.blogPost.$touched">Please post for blog</span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" ng-click="createBlog()">Add Blog</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
